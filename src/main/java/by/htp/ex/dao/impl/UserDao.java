@@ -6,27 +6,27 @@ import java.util.Random;
 import by.htp.ex.bean.NewUserInfo;
 import by.htp.ex.dao.DaoException;
 import by.htp.ex.dao.IUserDao;
+import by.htp.ex.data.LoginUser;
 
 public class UserDao implements IUserDao{
+	
+	 LoginUser  loginUser = new LoginUser();
+	 
 
 	@Override
-	public String signIn(String login, String password) throws DaoException {
+	public boolean logination(String login, String password) throws DaoException {
 		
-		Random rand = new Random();
-		int value = rand.nextInt(1000);
+//		return true;
 		
-//		if(value % 3 == 0) {
-//			try {
-//			   throw new SQLException("stub exception");
-//			}catch(SQLException e) {
-//				throw new DaoException(e);
-//			}
-//		}else if (value % 2 == 0) {
-//			return true;
-//		}else {
-//			return false;
-//		}
-	return "d";	
+		if(login.equals(loginUser.getUser(1))) {
+			
+			return true;
+		}else
+			
+		return false;
+		
+
+	
 	}
 	
 	
@@ -37,7 +37,7 @@ public class UserDao implements IUserDao{
 	@Override
 	public boolean registration(NewUserInfo user) throws DaoException  {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 }

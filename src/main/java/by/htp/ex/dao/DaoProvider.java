@@ -8,7 +8,7 @@ public final class DaoProvider {
 	
 	private static final DaoProvider instance = new DaoProvider();
 
-	private final IUserDao iUserDao = new UserDao();
+	private final IUserDao userDAO = new UserDao();
 	
 	private final INewsDao newsDAO = new NewsDao();
 	
@@ -18,7 +18,7 @@ public final class DaoProvider {
 	
 	
 	public IUserDao getIUserDao() {
-		return iUserDao;
+		return userDAO;
 	}
 	
 	public INewsDao getNewsDAO() {

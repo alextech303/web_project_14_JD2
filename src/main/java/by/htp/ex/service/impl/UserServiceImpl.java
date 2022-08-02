@@ -11,22 +11,24 @@ import by.htp.ex.util.validation.ValidationProvider;
 
 public class UserServiceImpl implements IUserService{
 
-	private final IUserDao iUserDao = DaoProvider.getInstance().getIUserDao();
-	
-	
-	
-	private final UserDataValidation userDataValidation = ValidationProvider.getInstance().getUserDataVelidation();
+	private final IUserDao userDAO = DaoProvider.getInstance().getIUserDao();
+//	private final UserDataValidation userDataValidation = ValidationProvider.getIntsance().getUserDataVelidation();
 	
 	@Override
 	public String signIn(String login, String password) throws ServiceException {
 		
-		if(!userDataValidation.checkAUthData(login, password)) {
-			throw new ServiceException("login ...... ");
-		}
-		
+		/*
+		 * if(!userDataValidation.checkAUthData(login, password)) { throw new
+		 * ServiceException("login ...... "); }
+		 */
 		
 		try {
-			return iUserDao.signIn(login, password);
+			if(userDAO.logination(login, password)) {
+				return userDAO.getRole(login, password);
+			}else {
+				return "guest";
+			}
+			
 		}catch(DaoException e) {
 			throw new ServiceException(e);
 		}
