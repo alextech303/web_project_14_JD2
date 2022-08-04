@@ -53,4 +53,16 @@ public class LoginUser  {
 	}
 		return null;
 }
+	
+	
+	public void setUser(String login, String password) {
+		
+		listOfLoginUser.add(login);
+		listOfLoginUserpassword.add(password);
+		
+		
+		
+		
+		
+	}
 }

@@ -7,6 +7,24 @@
 <title>Insert title here</title>
 </head>
 <body>
-registration
+<form action="controller" method="post">
+	
+		<input type="hidden" name="command" value="do_registration" /> 
+		
+		Enter login:<br />
+		
+		<input type="text" name="login" value="" /><br /> 
+		
+		Enter e-mail:<br />
+		
+		<input type="text" name="e-mail" value="" /><br /> 
+		
+		Enter password:<br />
+		
+		<input type="password" name="password" value="" /><br /> 
+		
+		<input type="submit" value="Отправить" /><br />
+		
+	</form>
 </body>
 </html>

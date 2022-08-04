@@ -28,11 +28,17 @@
 						</font> 
 					</c:if>
 					
-					<a href="">Regis</a> 
+					
 					
 					<input type="submit" value="Sign In" /><br />
+					</form>
 					
-				</form>
+					<form action="controller" method="post">
+					<input type="hidden" name="command" value="do_registration" /> 
+					
+					<input type="submit" value="Registrartion" /><br /> 
+					
+					</form>
 			</div>
 
 		</c:if>

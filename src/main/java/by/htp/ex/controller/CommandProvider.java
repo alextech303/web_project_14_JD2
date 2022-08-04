@@ -3,6 +3,7 @@ package by.htp.ex.controller;
 import java.util.HashMap;
 import java.util.Map;
 
+import by.htp.ex.controller.impl.DoRegistration;
 import by.htp.ex.controller.impl.DoSignIn;
 import by.htp.ex.controller.impl.DoSignOut;
 import by.htp.ex.controller.impl.GoToBasePage;
@@ -18,6 +19,7 @@ public class CommandProvider {
 		commands.put(CommandName.GO_TO_BASE_PAGE, new GoToBasePage());
 		commands.put(CommandName.GO_TO_LOGINATION_PAGE, new GoToLoginationPageCommand());
 		commands.put(CommandName.GO_TO_REGISTRATION_PAGE, new GoToRegistrationPageCommand());
+		commands.put(CommandName.DO_REGISTRATION, new DoRegistration());
 		commands.put(CommandName.DO_SIGN_IN, new DoSignIn());
 		commands.put(CommandName.DO_SIGN_OUT, new DoSignOut());
 		commands.put(CommandName.GO_TO_NEWS_LIST, new GoToNewsList());
